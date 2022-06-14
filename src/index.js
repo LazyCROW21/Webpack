@@ -1,4 +1,9 @@
-import sum from './sum';
-import './img_viewer';
+const btn = document.createElement('button');
+btn.innerText = 'Click me';
+btn.onclick = () => {
+    System.import('./img_viewer').thne(module => {
+        console.log(module);
+    });
+};
 
-console.log(sum(10, 20))
+document.body.appendChild(btn);
